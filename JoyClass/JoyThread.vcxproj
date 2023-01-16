@@ -24,6 +24,7 @@
     <ProjectGuid>{76ff04df-250b-4b05-89e7-9c9ee594fc57}</ProjectGuid>
     <RootNamespace>JoyThread</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Joystick</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -144,7 +145,7 @@
     <ClCompile Include="..\src\libenjoy.c" />
     <ClCompile Include="..\src\libenjoy_win32.c" />
     <ClCompile Include="Joystick.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\libenjoy.h" />
