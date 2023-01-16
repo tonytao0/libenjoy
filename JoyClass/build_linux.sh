@@ -1,0 +1,1 @@
+g++ test.cpp Joystick.cpp ../src/libenjoy.c ../src/libenjoy_linux.c
