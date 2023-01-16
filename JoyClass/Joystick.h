@@ -2,7 +2,6 @@
 #define JOYDTICK_H
 
 #include <string>
-#include <stdio.h>
 #include  <thread>
 
 
