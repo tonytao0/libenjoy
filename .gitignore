@@ -1,2 +1,5 @@
 /RemoteRocker/.vs
 /test/RemoteRocker/.vs
+/test/RemoteRocker/x64
+/test/RemoteRocker/*.user
+/test/JoyMannager/.vs

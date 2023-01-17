@@ -15,30 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Joystick.cpp">
+    <ClCompile Include="..\..\src\Joystick.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\libenjoy.c">
+    <ClCompile Include="..\..\src\libenjoy.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\libenjoy_win32.c">
+    <ClCompile Include="..\..\src\libenjoy_win32.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Joystick.h">
+    <ClInclude Include="..\..\src\Joystick.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\libenjoy.h">
+    <ClInclude Include="..\..\src\libenjoy.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\libenjoy_p.h">
+    <ClInclude Include="..\..\src\libenjoy_p.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\libenjoy_win32.h">
+    <ClInclude Include="..\..\src\libenjoy_win32.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

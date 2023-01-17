@@ -1,14 +1,14 @@
 ﻿#include <iostream>
 
 //you need include "Joystick.h"
-#include "Joystick.h"
+#include "../../src/Joystick.h"
 
 int main()
 {
     Joystick joy;
-    
-    int count = 0; 
-    JoyEvent ev{0};
+
+    int count = 0;
+    JoyEvent ev{ 0 };
     uint32_t joy_id = joy.getJoystickID();
     uint32_t thro_id = joy.getThrottleID();
     while (true)
@@ -23,10 +23,10 @@ int main()
                     printf("joystick: axis %d val %d\n", ev.part_id, ev.data);
                     break;
                 case LIBENJOY_EV_BUTTON:
-                    printf("joystick: button %d val %d\n",ev.part_id, ev.data);
+                    printf("joystick: button %d val %d\n", ev.part_id, ev.data);
                     break;
                 case LIBENJOY_EV_CONNECTED:
-                    printf("joystick: status changed: %d\n",ev.data);
+                    printf("joystick: status changed: %d\n", ev.data);
                     break;
                 }
             }
@@ -35,17 +35,17 @@ int main()
                 switch (ev.type)
                 {
                 case LIBENJOY_EV_AXIS:
-                    printf("throttle: axis %d val %d\n",ev.part_id, ev.data);
+                    printf("throttle: axis %d val %d\n", ev.part_id, ev.data);
                     break;
                 case LIBENJOY_EV_BUTTON:
-                    printf("throttle: button %d val %d\n",ev.part_id, ev.data);
+                    printf("throttle: button %d val %d\n", ev.part_id, ev.data);
                     break;
                 case LIBENJOY_EV_CONNECTED:
-                    printf("throttle: status changed: %d\n",ev.data);
+                    printf("throttle: status changed: %d\n", ev.data);
                     break;
                 }
             }
-            
+
         }
 
         //delay 100 ms
