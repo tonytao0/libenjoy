@@ -1,0 +1,1 @@
+g++ main.cpp Joystick.cpp  ../../src/libenjoy.c  ../../src/libenjoy_linux.c  ../../lib/udp/src/linux/udp_client.cpp

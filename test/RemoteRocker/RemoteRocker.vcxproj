@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1fe25301-91cd-4254-8123-4582b76fad45}</ProjectGuid>
+    <ProjectGuid>{2d509af5-2948-4dd3-8674-88e3a4b9365e}</ProjectGuid>
     <RootNamespace>RemoteRocker</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -72,6 +72,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <IncludePath>E:\work\Code\github\libenjoy\lib\udp\include;$(IncludePath)</IncludePath>
+    <SourcePath>$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -88,6 +91,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <UndefinePreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</UndefinePreprocessorDefinitions>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -114,7 +119,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -139,14 +144,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\libenjoy.c" />
-    <ClCompile Include="..\src\libenjoy_win32.c" />
-    <ClCompile Include="RemoteRocker.cpp" />
+    <ClCompile Include="..\..\JoyClass\Joystick.cpp" />
+    <ClCompile Include="..\..\lib\udp\src\windows\udp_client.cpp" />
+    <ClCompile Include="..\..\lib\udp\src\windows\WinScoketInit.cpp" />
+    <ClCompile Include="..\..\src\libenjoy.c" />
+    <ClCompile Include="..\..\src\libenjoy_win32.c" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\libenjoy.h" />
-    <ClInclude Include="..\src\libenjoy_p.h" />
-    <ClInclude Include="..\src\libenjoy_win32.h" />
+    <ClInclude Include="..\..\JoyClass\Joystick.h" />
+    <ClInclude Include="..\..\src\libenjoy.h" />
+    <ClInclude Include="..\..\src\libenjoy_p.h" />
+    <ClInclude Include="..\..\src\libenjoy_win32.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
